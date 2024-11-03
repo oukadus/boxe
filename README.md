@@ -1,6 +1,7 @@
 # MAQUETTE BOXE
 
-Intégration de la maquette Boxe en utilisant le framework Tailwind.
+Intégration de la maquette Boxe en utilisant le framework Tailwind.   
+
 Je n'ai utilisé que les couleurs de Tailwind
 
 ## INSTRUCTIONS
