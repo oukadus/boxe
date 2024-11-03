@@ -4,8 +4,161 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style.css" />
     <title>Boxe</title>
   </head>
-  <body></body>
+
+  <body class="bg-neutral-900">
+    <header class="bg-neutral-100 bg-repeat">
+      <div
+        class="container mx-auto flex w-3/4 flex-wrap items-center justify-between p-4"
+      >
+        <a href="#" class="logo w-1/2">
+          <img src="./img/logo.png" alt="Sport.com" />
+        </a>
+        <p class="w-1/2 text-right text-xl">Bonjour Julien</p>
+        <p class="w-3/5 text-xl">
+          Lorem ipsum dolor <em class="text-xl text-yellow-600">sit amet.</em>
+        </p>
+        <nav class="w-2/5">
+          <ul class="flex justify-end text-xl">
+            <li class="pl-10">
+              <a href="#" class="font-medium hover:text-yellow-600"
+                >Contactez-nous</a
+              >
+            </li>
+            <li class="pl-10">
+              <a href="#" class="font-medium hover:text-yellow-600"
+                >Parrainage</a
+              >
+            </li>
+            <li class="pl-10">
+              <a href="#" class="font-medium hover:text-yellow-600"
+                >Déconnexion</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto mt-3 w-3/4 bg-neutral-100">
+      <div
+        id="heroshot"
+        class="min-h-96 bg-[url('/img/header-page-catalogue.png')] bg-cover bg-top"
+      ></div>
+      <section
+        id="products"
+        class="container mx-auto mt-10 flex w-3/4 flex-wrap justify-center gap-32 pb-10"
+      >
+        <h2 class="hidden">Nos Produits</h2>
+
+        <article class="relative flex w-2/5 flex-col items-center">
+          <img
+            src="./img/gant-boxe-2.png"
+            alt="gant de boxe noire"
+            class="w-full"
+          />
+          <p
+            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+          >
+            -45%
+          </p>
+          <h3
+            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+          >
+            Gants de boxe de combat Klimax v3
+          </h3>
+          <div class="price -mt-4 flex w-full items-center justify-around">
+            <a
+              href="#"
+              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              >Voir la vente</a
+            >
+            <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
+            <p class="text-2xl font-bold text-yellow-500">65€</p>
+          </div>
+        </article>
+
+        <article class="relative flex w-2/5 flex-col items-center">
+          <img
+            src="./img/gant-boxe-1.png"
+            alt="gant de boxe noire"
+            class="w-full"
+          />
+          <p
+            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+          >
+            -45%
+          </p>
+          <h3
+            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+          >
+            Gants de boxe de combat Klimax v3
+          </h3>
+          <div class="price -mt-4 flex w-full items-center justify-around">
+            <a
+              href="#"
+              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              >Voir la vente</a
+            >
+            <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
+            <p class="text-2xl font-bold text-yellow-500">65€</p>
+          </div>
+        </article>
+
+        <article class="relative flex w-2/5 flex-col items-center">
+          <img
+            src="./img/gant-boxe-2.png"
+            alt="gant de boxe noire"
+            class="w-full"
+          />
+          <p
+            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+          >
+            -45%
+          </p>
+          <h3
+            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+          >
+            Gants de boxe de combat Klimax v3
+          </h3>
+          <div class="price -mt-4 flex w-full items-center justify-around">
+            <a
+              href="#"
+              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              >Voir la vente</a
+            >
+            <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
+            <p class="text-2xl font-bold text-yellow-500">65€</p>
+          </div>
+        </article>
+        <article class="relative flex w-2/5 flex-col items-center">
+          <img
+            src="./img/gant-boxe-1.png"
+            alt="gant de boxe noire"
+            class="w-full"
+          />
+          <p
+            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+          >
+            -45%
+          </p>
+          <h3
+            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+          >
+            Gants de boxe de combat Klimax v3
+          </h3>
+          <div class="price -mt-4 flex w-full items-center justify-around">
+            <a
+              href="#"
+              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              >Voir la vente</a
+            >
+            <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
+            <p class="text-2xl font-bold text-yellow-500">65€</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
