@@ -4,62 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              boxeYellow: "#EA9F06",
+              boxeText: "#EA9F06",
+              boxeMain: "#F3F3F3",
+              boxeFooter: "#373737",
+              boxeReduc: "#292929",
+              boxeFootNav: "#D1D1D1",
+            },
+          },
+        },
+      };
+    </script>
     <link rel="stylesheet" href="./src/style.css" />
     <title>Boxe</title>
   </head>
 
-  <body class="bg-neutral-900">
-    <header class="bg-neutral-100">
+  <body class="bg-boxeReduc">
+    <header class="bg-boxeMain">
       <div
-        class="container mx-auto flex w-3/4 flex-wrap items-center justify-between py-5"
+        class="container mx-auto flex flex-wrap items-center justify-between py-5 sm:w-4/5 sm:flex-col lg:w-3/4 lg:flex-row"
       >
-        <a href="#" class="logo w-1/2 pb-10">
-          <img src="./img/logo.png" alt="Sport.com" />
-        </a>
-        <p class="w-1/2 pb-10 text-right text-xl">Bonjour Julien</p>
-        <p class="w-3/5 text-xl">
-          Lorem ipsum dolor <em class="text-xl text-yellow-600">sit amet.</em>
-        </p>
-        <nav class="w-2/5">
-          <ul class="flex justify-end text-xl">
-            <li class="pl-10">
-              <a href="#" class="font-medium hover:text-yellow-600"
-                >Contactez-nous</a
-              >
-            </li>
-            <li class="pl-10">
-              <a href="#" class="font-medium hover:text-yellow-600"
-                >Parrainage</a
-              >
-            </li>
-            <li class="pl-10">
-              <a href="#" class="font-medium hover:text-yellow-600"
-                >Déconnexion</a
-              >
-            </li>
-          </ul>
-        </nav>
+        <div
+          class="flex flex-col sm:w-full sm:items-center lg:w-1/2 lg:items-start"
+        >
+          <a href="#" class="logo pb-10">
+            <img src="./img/logo.png" alt="Sport.com" />
+          </a>
+          <p class="text-xl sm:w-full sm:text-center lg:w-3/5 lg:text-left">
+            Lorem ipsum dolor <em class="text-boxeYellow text-xl">sit amet.</em>
+          </p>
+        </div>
+        <div class="sm:w-full sm:pb-5 sm:pt-10 lg:w-1/2">
+          <p class="text-xl sm:pb-5 sm:text-left lg:pb-10 lg:text-right">
+            Bonjour Julien
+          </p>
+          <nav>
+            <ul class="flex text-xl sm:justify-between lg:justify-end">
+              <li class="lg:pl-10">
+                <a
+                  href="#"
+                  class="hover:text-boxeYellow font-medium duration-500"
+                  >Contactez-nous</a
+                >
+              </li>
+              <li class="lg:pl-10">
+                <a
+                  href="#"
+                  class="hover:text-boxeYellow font-medium duration-500"
+                  >Parrainage</a
+                >
+              </li>
+              <li class="lg:pl-10">
+                <a
+                  href="#"
+                  class="hover:text-boxeYellow font-medium duration-500"
+                  >Déconnexion</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
-    <main class="container mx-auto mt-3 w-3/4 bg-neutral-100">
+    <main class="bg-boxeMain container mx-auto mt-3 sm:w-full lg:w-3/4">
       <div
         id="heroshot"
         class="min-h-96 bg-[url('/img/header-page-catalogue.png')] bg-cover bg-top"
       ></div>
       <section
         id="products"
-        class="container mx-auto mt-10 flex w-3/4 flex-wrap justify-center gap-32 pb-10"
+        class="md-flex-wrap container mx-auto mt-10 flex justify-center pb-20 sm:w-full sm:flex-col sm:flex-nowrap sm:items-center sm:gap-10 md:gap-20 lg:w-3/4 lg:flex-row lg:flex-wrap lg:items-start lg:gap-20"
       >
         <h2 class="hidden">Nos Produits</h2>
 
-        <article class="relative flex w-2/5 flex-col items-center">
+        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
           <img
             src="./img/gant-boxe-2.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
           >
             -45%
           </p>
@@ -71,22 +101,22 @@
           <div class="price -mt-4 flex w-full items-center justify-around">
             <a
               href="#"
-              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 transition-all duration-500 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
               >Voir la vente</a
             >
             <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
-            <p class="text-2xl font-bold text-yellow-500">65€</p>
+            <p class="text-boxeYellow text-2xl font-bold">65€</p>
           </div>
         </article>
 
-        <article class="relative flex w-2/5 flex-col items-center">
+        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
           <img
             src="./img/gant-boxe-1.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
           >
             -45%
           </p>
@@ -98,22 +128,22 @@
           <div class="price -mt-4 flex w-full items-center justify-around">
             <a
               href="#"
-              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 transition-all duration-500 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
               >Voir la vente</a
             >
             <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
-            <p class="text-2xl font-bold text-yellow-500">65€</p>
+            <p class="text-boxeYellow text-2xl font-bold">65€</p>
           </div>
         </article>
 
-        <article class="relative flex w-2/5 flex-col items-center">
+        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
           <img
             src="./img/gant-boxe-2.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
           >
             -45%
           </p>
@@ -125,21 +155,21 @@
           <div class="price -mt-4 flex w-full items-center justify-around">
             <a
               href="#"
-              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              class="hover:bg-boxeYellow bg-[#363636] bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 transition-all duration-500 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
               >Voir la vente</a
             >
             <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
-            <p class="text-2xl font-bold text-yellow-500">65€</p>
+            <p class="text-boxeYellow text-2xl font-bold">65€</p>
           </div>
         </article>
-        <article class="relative flex w-2/5 flex-col items-center">
+        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
           <img
             src="./img/gant-boxe-1.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="absolute left-80 top-5 rounded-lg bg-neutral-900 p-3 text-2xl font-semibold text-yellow-500"
+            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
           >
             -45%
           </p>
@@ -151,27 +181,92 @@
           <div class="price -mt-4 flex w-full items-center justify-around">
             <a
               href="#"
-              class="bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 duration-300 ease-in hover:from-[#ea9f06] hover:to-yellow-500"
+              class="hover:to-boxeYellow bg-gradient-to-r from-[#363636] to-[#9A9A9A] px-6 py-2 text-neutral-50 transition-all duration-500 hover:from-[#ea9f06]"
               >Voir la vente</a
             >
             <p class="text-2xl font-bold text-neutral-900 line-through">120€</p>
-            <p class="text-2xl font-bold text-yellow-500">65€</p>
+            <p class="text-boxeYellow text-2xl font-bold">65€</p>
           </div>
         </article>
       </section>
+    </main>
+    <footer class="bg-boxeFooter min-h-40">
       <nav
-        class="mx-auto w-1/2 rounded-2xl border-2 bg-neutral-50 p-4 shadow-md"
+        class="mx-auto -translate-y-10 rounded-2xl border-2 bg-neutral-50 p-4 shadow-lg sm:w-4/5 lg:w-1/2"
       >
         <ul class="flex items-center justify-between">
-          <li><a href="#" class="hover:text-yellow-500">Qui sommes-nous</a></li>
-          <li class="rounded-full bg-neutral-300 p-2"></li>
-          <li><a href="#" class="hover:text-yellow-500">Contact</a></li>
-          <li class="rounded-full bg-neutral-300 p-2"></li>
-          <li><a href="#" class="hover:text-yellow-500">Assistance</a></li>
-          <li class="rounded-full bg-neutral-300 p-2"></li>
-          <li><a href="#" class="hover:text-yellow-500">CGV</a></li>
+          <li>
+            <a href="#" class="hover:text-boxeYellow duration-500"
+              >Qui sommes-nous</a
+            >
+          </li>
+          <li class="bg-boxeFootNav rounded-full p-2"></li>
+          <li>
+            <a href="#" class="hover:text-boxeYellow duration-500">Contact</a>
+          </li>
+          <li class="bg-boxeFootNav rounded-full p-2"></li>
+          <li>
+            <a href="#" class="hover:text-boxeYellow duration-500"
+              >Assistance</a
+            >
+          </li>
+          <li class="bg-boxeFootNav rounded-full p-2"></li>
+          <li>
+            <a href="#" class="hover:text-boxeYellow duration-500">CGV</a>
+          </li>
         </ul>
       </nav>
-    </main>
+      <div class="mx-auto mb-5 w-3/4 gap-10 sm:columns-2 lg:columns-4">
+        <article class="flex w-full flex-col items-center">
+          <img src="./img/icon-livre.png" alt="icone de livre" />
+          <p class="w-full p-4 text-center text-xs text-neutral-300">
+            Sed ut perspiciatis unde ominis iste natus error sit voluptatem
+            accusantium doloremque audantium, toam rem aperiam
+          </p>
+        </article>
+        <article class="flex w-full flex-col items-center">
+          <img src="./img/icon-camion.png" alt="icone de livre" />
+          <p class="w-full p-4 text-center text-xs text-neutral-300">
+            Sed ut perspiciatis unde ominis iste natus error sit voluptatem
+            accusantium doloremque audantium, toam rem aperiam
+          </p>
+        </article>
+        <article class="flex w-full flex-col items-center">
+          <img src="./img/icon-cadenat.png" alt="icone de livre" />
+          <p class="w-full p-4 text-center text-xs text-neutral-300">
+            Sed ut perspiciatis unde ominis iste natus error sit voluptatem
+            accusantium doloremque audantium, toam rem aperiam
+          </p>
+        </article>
+        <article class="flex w-full flex-col items-center">
+          <img src="./img/icon-pouce.png" alt="icone de livre" />
+          <p class="w-full p-4 text-center text-xs text-neutral-300">
+            Sed ut perspiciatis unde ominis iste natus error sit voluptatem
+            accusantium doloremque audantium, toam rem aperiam
+          </p>
+        </article>
+      </div>
+      <hr class="border-boxeFootNav mx-auto w-3/4" />
+      <ul class="mx-auto flex w-80 justify-around py-5">
+        <li>
+          <a href="#" class="duration-500 hover:opacity-50"
+            ><img src="./img/icon-facebook.png" alt="facebook"
+          /></a>
+        </li>
+        <li>
+          <a href="#" class="duration-500 hover:opacity-50"
+            ><img src="./img/icon-twitter.png" alt="Twitter"
+          /></a>
+        </li>
+        <li>
+          <a href="#" class="duration-500 hover:opacity-50"
+            ><img src="./img/icon-linkedin.png" alt="Linkedin"
+          /></a>
+        </li>
+      </ul>
+      <p class="text-boxeFootNav mx-auto w-3/4 py-5 text-center">
+        &copy; 2013 sport privilege. Tous droits réservés.
+      </p>
+    </footer>
   </body>
 </html>
