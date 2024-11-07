@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TYPO ARIMO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -10,41 +18,48 @@
           extend: {
             colors: {
               boxeYellow: "#EA9F06",
-              boxeText: "#EA9F06",
+              boxeText: "#212121",
               boxeMain: "#F3F3F3",
               boxeFooter: "#373737",
               boxeReduc: "#292929",
               boxeFootNav: "#D1D1D1",
             },
+            fontFamily: {
+              arimo: ["Arimo", "arial"],
+              arial: ["arial", "sans-serif"],
+            },
           },
         },
       };
     </script>
-    <link rel="stylesheet" href="./src/style.css" />
     <title>Boxe</title>
   </head>
 
-  <body class="bg-boxeReduc">
+  <body class="bg-boxeReduc text-boxeText font-arimo">
     <header class="bg-boxeMain">
       <div
-        class="container mx-auto flex flex-wrap items-center justify-between py-5 sm:w-4/5 sm:flex-col lg:w-3/4 lg:flex-row"
+        class="container mx-auto flex flex-wrap items-center justify-between py-5 max-lg:w-4/5 max-lg:flex-col lg:w-3/4 lg:flex-row"
       >
         <div
-          class="flex flex-col sm:w-full sm:items-center lg:w-1/2 lg:items-start"
+          class="flex flex-col max-lg:w-full max-lg:items-center lg:w-1/2 lg:items-start"
         >
           <a href="#" class="logo pb-10">
             <img src="./img/logo.png" alt="Sport.com" />
           </a>
-          <p class="text-xl sm:w-full sm:text-center lg:w-3/5 lg:text-left">
+          <p
+            class="text-xl max-lg:w-full max-lg:text-center lg:w-3/5 lg:text-left"
+          >
             Lorem ipsum dolor <em class="text-boxeYellow text-xl">sit amet.</em>
           </p>
         </div>
-        <div class="sm:w-full sm:pb-5 sm:pt-10 lg:w-1/2">
-          <p class="text-xl sm:pb-5 sm:text-left lg:pb-10 lg:text-right">
+        <div class="max-lg:w-full max-lg:pb-5 max-lg:pt-10 lg:w-1/2">
+          <p
+            class="text-xl max-lg:pb-5 max-lg:text-left lg:pb-10 lg:text-right"
+          >
             Bonjour Julien
           </p>
           <nav>
-            <ul class="flex text-xl sm:justify-between lg:justify-end">
+            <ul class="flex text-xl max-lg:justify-between lg:justify-end">
               <li class="lg:pl-10">
                 <a
                   href="#"
@@ -71,30 +86,32 @@
         </div>
       </div>
     </header>
-    <main class="bg-boxeMain container mx-auto mt-3 sm:w-full lg:w-3/4">
+    <main class="bg-boxeMain container mx-auto mt-3 max-lg:w-full lg:w-3/4">
       <div
         id="heroshot"
         class="min-h-96 bg-[url('/img/header-page-catalogue.png')] bg-cover bg-top"
       ></div>
       <section
         id="products"
-        class="md-flex-wrap container mx-auto mt-10 flex justify-center pb-20 sm:w-full sm:flex-col sm:flex-nowrap sm:items-center sm:gap-10 md:gap-20 lg:w-3/4 lg:flex-row lg:flex-wrap lg:items-start lg:gap-20"
+        class="md-flex-wrap container mx-auto mt-10 flex justify-center pb-20 max-lg:w-full max-lg:flex-col max-lg:flex-nowrap max-lg:items-center max-lg:gap-10 md:gap-20 lg:w-3/4 lg:flex-row lg:flex-wrap lg:items-start lg:gap-20"
       >
         <h2 class="hidden">Nos Produits</h2>
 
-        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
+        <article
+          class="relative flex flex-col items-center max-lg:w-3/4 lg:w-2/5"
+        >
           <img
             src="./img/gant-boxe-2.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
+            class="text-boxeYellow bg-boxeReduc font-arial absolute top-5 rounded-lg p-3 text-2xl font-semibold max-lg:-right-10 lg:-right-10"
           >
             -45%
           </p>
           <h3
-            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+            class="text-max-lg -translate-y-9 bg-neutral-50 font-semibold uppercase"
           >
             Gants de boxe de combat Klimax v3
           </h3>
@@ -109,19 +126,21 @@
           </div>
         </article>
 
-        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
+        <article
+          class="relative flex flex-col items-center max-lg:w-3/4 lg:w-2/5"
+        >
           <img
             src="./img/gant-boxe-1.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
+            class="text-boxeYellow bg-boxeReduc font-arial absolute top-5 rounded-lg p-3 text-2xl font-semibold max-lg:-right-10 lg:-right-10"
           >
             -45%
           </p>
           <h3
-            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+            class="text-max-lg -translate-y-9 bg-neutral-50 font-semibold uppercase"
           >
             Gants de boxe de combat Klimax v3
           </h3>
@@ -136,19 +155,21 @@
           </div>
         </article>
 
-        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
+        <article
+          class="relative flex flex-col items-center max-lg:w-3/4 lg:w-2/5"
+        >
           <img
             src="./img/gant-boxe-2.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
+            class="text-boxeYellow bg-boxeReduc font-arial absolute top-5 rounded-lg p-3 text-2xl font-semibold max-lg:-right-10 lg:-right-10"
           >
             -45%
           </p>
           <h3
-            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+            class="text-max-lg -translate-y-9 bg-neutral-50 font-semibold uppercase"
           >
             Gants de boxe de combat Klimax v3
           </h3>
@@ -162,19 +183,21 @@
             <p class="text-boxeYellow text-2xl font-bold">65€</p>
           </div>
         </article>
-        <article class="relative flex flex-col items-center sm:w-3/4 lg:w-2/5">
+        <article
+          class="relative flex flex-col items-center max-lg:w-3/4 lg:w-2/5"
+        >
           <img
             src="./img/gant-boxe-1.png"
             alt="gant de boxe noire"
             class="w-full"
           />
           <p
-            class="text-boxeYellow bg-boxeReduc absolute top-5 rounded-lg p-3 text-2xl font-semibold sm:-right-10 lg:-right-10"
+            class="text-boxeYellow bg-boxeReduc font-arial absolute top-5 rounded-lg p-3 text-2xl font-semibold max-lg:-right-10 lg:-right-10"
           >
             -45%
           </p>
           <h3
-            class="-translate-y-9 bg-neutral-50 text-sm font-semibold uppercase"
+            class="text-max-lg -translate-y-9 bg-neutral-50 font-semibold uppercase"
           >
             Gants de boxe de combat Klimax v3
           </h3>
@@ -192,7 +215,7 @@
     </main>
     <footer class="bg-boxeFooter min-h-40">
       <nav
-        class="mx-auto -translate-y-10 rounded-2xl border-2 bg-neutral-50 p-4 shadow-lg sm:w-4/5 lg:w-1/2"
+        class="mx-auto -translate-y-10 rounded-2xl border-2 bg-neutral-50 p-4 shadow-lg max-lg:w-4/5 lg:w-1/2"
       >
         <ul class="flex items-center justify-between">
           <li>
@@ -216,7 +239,7 @@
           </li>
         </ul>
       </nav>
-      <div class="mx-auto mb-5 w-3/4 gap-10 sm:columns-2 lg:columns-4">
+      <div class="mx-auto mb-5 w-3/4 gap-10 max-lg:columns-2 lg:columns-4">
         <article class="flex w-full flex-col items-center">
           <img src="./img/icon-livre.png" alt="icone de livre" />
           <p class="w-full p-4 text-center text-xs text-neutral-300">
